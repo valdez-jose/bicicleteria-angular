@@ -1,0 +1,56 @@
+
+
+.hero {
+    background-image: url('https://pedalia.cc/wp-content/uploads/2016/05/PFB.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-img img {
+  width: 350px;
+  max-width: 100%;
+}
+
+.hero-text {
+  color: white ;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: blue;
+}
+
+.hero-text p {
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    text-align: center;
+  }
+}

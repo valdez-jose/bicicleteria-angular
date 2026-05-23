@@ -1,0 +1,118 @@
+
+/* SECTION GENERAL */
+.contacto-section {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+
+/* TITULO */
+.titulo-contacto {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* CARD */
+.contacto-card {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* COLUMNAS */
+.formulario-container,
+.imagen-container {
+  flex: 1;
+}
+
+/* FORMULARIO */
+.formulario-container {
+  padding: 40px; /* Le damos buen aire interno al contenedor */
+  display: flex;
+  align-items: center; /* Centra verticalmente todo el bloque del formulario */
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* <--- AGRANDADO: Más espacio entre los elementos del formulario */
+}
+
+input,
+textarea {
+  /* <--- AGRANDADO: De 12px pasamos a 18px de relleno para que los inputs sean más altos y robustos */
+  padding: 18px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.05rem; /* Un toque más grande la letra para acompañar */
+  outline: none;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+  /* El rows="5" original de tu HTML sumado al padding de 18px 
+     le va a dar el cuerpo necesario para emparejar la altura */
+}
+
+button {
+  /* <--- AGRANDADO: Botón más imponente para cerrar el formulario al nivel de la foto */
+  padding: 18px; 
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* IMAGEN */
+.imagen-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RESPONSIVE (Tu orden requerido: Título -> Imagen -> Formulario) */
+@media (max-width: 768px) {
+  .contacto-card {
+    /* Usamos column-reverse para que la imagen suba respetando tu HTML original */
+    flex-direction: column-reverse; 
+  }
+
+  .imagen-container img {
+    height: 300px;
+  }
+
+  .formulario-container {
+    padding: 30px 20px;
+  }
+
+  form {
+    gap: 15px; /* En móviles achicamos el espacio para que no sea eterno */
+  }
+
+  input, textarea, button {
+    padding: 14px; /* Inputs normales para pantallas táctiles */
+  }
+
+  .titulo-contacto {
+    font-size: 1.6rem;
+  }
+}
